@@ -1,0 +1,13 @@
+<div class="ng-icon-sidebar ng-icon-sidebar--{{ opened ? 'opened' : 'closed' }}"
+  (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()">
+  <ul>
+    <li *ngFor="let data of navData">
+      <a href="#" [routerLink]="[data.routeLink]">
+        <span class="icon-container">
+          <i [class]="data.icon"></i>      
+        </span>
+        {{data.label}}
+      </a>
+    </li>
+  </ul>
+</div>
