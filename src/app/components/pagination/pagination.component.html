@@ -1,0 +1,14 @@
+<div class="list">
+  <div *ngFor="let item of numbers | paginate: { itemsPerPage: 5, currentPage: p }">
+    <ul >
+        <li>{{ item }}</li>
+      </ul>
+  </div>
+</div>
+  
+  <!-- <pagination-controls (pageChange)="p = $event"></pagination-controls> -->
+
+  <!-- paginater show when list data more then 5 -->
+  <div *ngIf="numbers.length > 5">
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+  </div>
