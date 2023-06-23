@@ -1,0 +1,10 @@
+<div class="main">
+    <div *ngFor="let group of groups" class="group-container mx-2">
+      <div class="group" cdkDropList (cdkDropListDropped)="onItemDrop($event, group)">
+        <h3 class="group-name">{{ group.name }}</h3>
+        <p class="item-list">
+          <span class="items px-3" *ngFor="let item of group.items" cdkDrag>{{ item }}</span>
+        </p>
+      </div>
+    </div>
+  </div>

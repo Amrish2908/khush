@@ -8,6 +8,8 @@ import { SidebarComponent } from './components/core/sidebar/sidebar.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { PaginationComponent } from './components/pagination/pagination.component';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { DragDropComponent } from './components/drag-drop/drag-drop.component';
+import {DragDropModule} from '@angular/cdk/drag-drop';
 
 
 @NgModule({
@@ -16,12 +18,14 @@ import { NgxPaginationModule } from 'ngx-pagination';
     HeaderComponent,
     SidebarComponent,
     DashboardComponent,
-    PaginationComponent
+    PaginationComponent,
+    DragDropComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    DragDropModule
   ],
   providers: [],
   bootstrap: [AppComponent]
